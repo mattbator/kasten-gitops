@@ -25,13 +25,13 @@ spec:
       destination:
         server: '{{.server}}'
         namespace: kasten-io
-    syncPolicy:
-      managedNamespaceMetadata:
-        labels:
-          argocd.argoproj.io/managed-by: argocd
-      automated: 
-        prune: true
-        selfHeal: true
-      syncOptions:
-        - CreateNamespace=true
+      syncPolicy:
+        managedNamespaceMetadata:
+          labels:
+            argocd.argoproj.io/managed-by: argocd
+        automated: 
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
 
