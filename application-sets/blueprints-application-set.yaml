@@ -12,17 +12,13 @@ spec:
           argocd.argoproj.io/secret-type: cluster
   template:
     metadata:
-      name: '{{.name}}-kasten-app'
+      name: '{{.name}}-blueprints'
     spec:
       project: "default"
       source:
         repoURL: https://github.com/mattbator/kasten-gitops/
         targetRevision: HEAD
-        path: kasten
-        helm:
-          releaseName: "k10"
-          valueFiles:
-            - values.yaml
+        path: kasten-blueprints
       destination:
         server: '{{.server}}'
         namespace: kasten-io
