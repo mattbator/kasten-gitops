@@ -1,7 +1,7 @@
 apiVersion: cr.kanister.io/v1alpha1
 kind: Blueprint
 metadata:
-  name: edb-hooks
+  name: edb-hooks-2
   namespace: kasten-io
 actions:
   backupPrehook:
