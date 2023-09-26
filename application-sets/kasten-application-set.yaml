@@ -20,6 +20,7 @@ spec:
         targetRevision: HEAD
         path: kasten
         helm:
+          releaseName: k10
           valueFiles:
             - values.yaml
       destination:
