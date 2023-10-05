@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: blueprints-app-set
+  name: kasten-resources-app-set
 spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
@@ -12,13 +12,13 @@ spec:
           argocd.argoproj.io/secret-type: cluster
   template:
     metadata:
-      name: '{{.name}}-blueprints'
+      name: '{{.name}}-kasten-resources'
     spec:
       project: "default"
       source:
         repoURL: https://github.com/mattbator/kasten-gitops/
         targetRevision: HEAD
-        path: kasten-blueprints
+        path: apps/kasten-resources
       destination:
         server: '{{.server}}'
         namespace: kasten-io

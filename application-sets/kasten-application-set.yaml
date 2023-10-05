@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/mattbator/kasten-gitops/
         targetRevision: HEAD
-        path: kasten
+        path: apps/kasten
         helm:
           releaseName: "k10"
           valueFiles:
